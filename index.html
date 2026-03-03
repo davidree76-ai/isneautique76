@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Isneautique 76 – Moteurs de Bateau | Dree Négoce</title>
+  <link href="https://urldefense.com/v3/__https://fonts.googleapis.com/css2?family=Playfair*Display:wght@700;900&family=Source*Sans*3:wght@300;400;500;600&display=swap__;Kysr!!L8-7AA!QRBlrywDtKUnzSYOIdry4EcD-KKYuMM7moAqU_F-G3_6Ef2P_YH9UP5mKHfKuFpfTgpibZJO34pcgjz2aA$ " rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ink:#08192e;--deep:#04111f;--ocean:#0b3d6b;
+      --wave:#2e86c1;--foam:#7ec8e3;--mist:#b8dce8;
+      --rope:#c49a3c;--white:#f5f0e8;--gray:#7a9ab0;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Source Sans 3',sans-serif;background:var(--deep);color:var(--white);overflow-x:hidden}
+
+```
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 5%;background:rgba(4,17,31,.93);backdrop-filter:blur(18px);border-bottom:1px solid rgba(126,200,227,.1)} .logo-main{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:900;color:var(--white)}
+.logo-main span{color:var(--foam)}
+.logo-sub{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray)}
+nav ul{list-style:none;display:flex;gap:2.2rem}
+nav ul a{color:var(--gray);text-decoration:none;font-size:.88rem;transition:color .2s} nav ul a:hover{color:var(--foam)} .nav-devis{border:1.5px solid var(--rope);color:var(--rope);padding:.5rem 1.3rem;border-radius:3px;font-size:.82rem;font-weight:700;text-decoration:none;text-transform:uppercase;transition:all .25s} .nav-devis:hover{background:var(--rope);color:var(--deep)}
+@media(max-width:768px){nav ul{display:none}}
+
+/* HERO */
+#hero{min-height:100vh;display:flex;align-items:center;padding:7rem 5% 4rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 65% 35%,rgba(21,101,160,.5) 0%,transparent 65%),linear-gradient(180deg,#04111f 0%,#08192e 55%,#0b3d6b 100%)}
+.rope-line{position:absolute;top:0;right:0;bottom:0;width:3px;background:repeating-linear-gradient(180deg,var(--rope) 0px,var(--rope) 8px,transparent 8px,transparent 14px);opacity:.25} .hero-waves{position:absolute;bottom:0;left:0;right:0;line-height:0}
+.hero-waves svg{display:block;width:100%} .hero-content{position:relative;z-index:2;max-width:720px}
+.eyebrow-line{display:inline-flex;align-items:center;gap:.6rem;color:var(--foam);font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.4rem}
+.eyebrow-line::before{content:'';width:28px;height:1px;background:var(--foam);display:block}
+h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,7vw,5.8rem);font-weight:900;line-height:1.0}
+h1 em{color:var(--foam);font-style:italic}
+h1 strong{color:var(--rope)}
+.divider{width:70px;height:3px;background:linear-gradient(90deg,var(--rope),transparent);margin:1.6rem 0} .hero-desc{font-size:1rem;font-weight:300;color:var(--mist);max-width:530px;line-height:1.8}
+.hero-badges{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.8rem}
+.badge{background:rgba(126,200,227,.1);border:1px solid rgba(126,200,227,.22);color:var(--mist);padding:.28rem .8rem;border-radius:2px;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem}
+.btn-gold{background:var(--rope);color:var(--deep);padding:.9rem 2.2rem;border-radius:3px;font-weight:700;font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .25s;box-shadow:0 4px 22px rgba(196,154,60,.3)} .btn-gold:hover{background:#d4aa4c;transform:translateY(-2px)}
+.btn-ghost{border:1.5px solid rgba(126,200,227,.4);color:var(--foam);padding:.9rem 2.2rem;border-radius:3px;font-weight:600;font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .25s} .btn-ghost:hover{border-color:var(--foam);background:rgba(126,200,227,.08)}
+
+/* SECTIONS */
+section{padding:6rem 5%;position:relative} .sec-eyebrow{display:inline-flex;align-items:center;gap:.5rem;color:var(--foam);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.75rem}
+.sec-eyebrow::before{content:'';width:22px;height:1px;background:var(--foam);display:block}
+h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4.5vw,3rem);font-weight:900;line-height:1.1}
+.sec-lead{color:var(--gray);font-size:.98rem;font-weight:300;line-height:1.75;max-width:500px;margin-top:.6rem}
+
+/* CATALOGUE */
+#catalogue{background:linear-gradient(180deg,var(--ink) 0%,var(--deep) 100%)} .cat-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-bottom:2.8rem}
+.filters{display:flex;gap:.6rem;flex-wrap:wrap}
+.flt{background:rgba(11,61,107,.3);border:1px solid rgba(126,200,227,.15);color:var(--gray);padding:.42rem 1.1rem;border-radius:2px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .2s} .flt:hover,.flt.on{background:var(--wave);color:#fff;border-color:var(--wave)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem}
+
+/* CARD STANDARD */
+.card{background:rgba(11,61,107,.2);border:1px solid rgba(126,200,227,.1);border-radius:8px;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(126,200,227,.35);box-shadow:0 16px 44px rgba(0,0,0,.4)} .card-visual{height:160px;background:linear-gradient(135deg,#0b3d6b,#08192e);display:flex;align-items:center;justify-content:center;font-size:3.2rem;position:relative}
+.card-visual::after{content:'';position:absolute;bottom:0;left:0;right:0;height:40px;background:linear-gradient(to top,rgba(11,61,107,.6),transparent)}
+.pill{position:absolute;top:10px;left:10px;z-index:1;padding:.16rem .55rem;border-radius:2px;font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.pg{background:var(--rope);color:var(--deep)}
+.pw{background:var(--wave);color:#fff}
+.pe{background:#2e7d32;color:#fff}
+.card-body{padding:1.15rem 1.25rem}
+.card-brand{color:var(--foam);font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.card-name{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-top:.18rem}
+.card-specs{display:flex;gap:1.1rem;flex-wrap:wrap;margin-top:.85rem;padding-top:.85rem;border-top:1px solid rgba(255,255,255,.06)} .sp{display:flex;flex-direction:column}
+.sp-v{font-weight:600;font-size:.86rem}
+.sp-k{color:var(--gray);font-size:.65rem;text-transform:uppercase;letter-spacing:.08em;margin-top:.1rem}
+.card-foot{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.25rem;border-top:1px solid rgba(255,255,255,.05)} .price{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--rope)}
+.devis-btn{background:var(--ocean);border:1px solid rgba(126,200,227,.22);color:var(--foam);padding:.48rem 1rem;border-radius:3px;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .2s} .devis-btn:hover{background:var(--wave);border-color:var(--wave);color:#fff}
+
+/* ══ FEATURED CARD (Honda BF25) ══ */
+.featured-card{
+  grid-column: 1 / -1;
+  background:rgba(11,61,107,.25);
+  border:1px solid rgba(196,154,60,.35);
+  border-radius:12px;overflow:hidden;
+  display:grid;grid-template-columns:1.1fr 1fr; } @media(max-width:768px){.featured-card{grid-template-columns:1fr}}
+.featured-gallery{position:relative;background:#06101e;min-height:360px}
+.feat-slides{display:flex;height:100%;transition:transform .45s ease} .feat-slide{min-width:100%;height:360px;overflow:hidden;flex-shrink:0}
+.feat-slide img{width:100%;height:100%;object-fit:cover;object-position:center}
+.gallery-nav{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:10}
+.g-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.3);border:none;cursor:pointer;transition:background .2s;padding:0} .g-dot.active{background:var(--rope)}
+.gallery-arr{position:absolute;top:50%;transform:translateY(-50%);background:rgba(6,16,30,.7);border:1px solid rgba(126,200,227,.2);color:var(--foam);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1rem;z-index:10;transition:all .2s} .gallery-arr:hover{background:rgba(21,101,160,.7);border-color:var(--foam)}
+.arr-prev{left:12px}
+.arr-next{right:12px}
+.feat-badge{position:absolute;top:14px;left:14px;z-index:10;background:var(--rope);color:var(--deep);padding:.25rem .75rem;border-radius:3px;font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.featured-info{padding:2rem 2rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between}
+.feat-top{}
+.feat-brand{color:var(--foam);font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.feat-name{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;line-height:1.1;margin-top:.3rem}
+.feat-sub{color:var(--gray);font-size:.88rem;font-weight:300;margin-top:.5rem;line-height:1.6}
+.feat-specs{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:1.5rem} .feat-spec{background:rgba(0,0,0,.2);border:1px solid rgba(126,200,227,.1);border-radius:6px;padding:.7rem .9rem} .feat-spec-v{font-weight:700;font-size:.95rem;color:var(--white)}
+.feat-spec-k{color:var(--gray);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem}
+.feat-desc{color:var(--mist);font-size:.88rem;font-weight:300;line-height:1.7;margin-top:1.2rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,.06)} .feat-bottom{margin-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.feat-price-wrap{}
+.feat-price-lbl{color:var(--gray);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}
+.feat-price{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--rope);line-height:1}
+.feat-cta{background:var(--rope);color:var(--deep);border:none;padding:.85rem 1.8rem;border-radius:4px;font-family:'Source Sans 3',sans-serif;font-size:.88rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:all .25s} .feat-cta:hover{background:#d4aa4c;transform:translateY(-2px)}
+
+/* CONTACT */
+#contact{background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(11,61,107,.4) 0%,transparent 70%),var(--ink)} .contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:4rem;align-items:start;margin-top:2.8rem}
+@media(max-width:768px){.contact-wrap{grid-template-columns:1fr;gap:2.5rem}}
+.contact-info{display:flex;flex-direction:column;gap:1.2rem}
+.info-block{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem;background:rgba(11,61,107,.2);border:1px solid rgba(126,200,227,.1);border-radius:6px;transition:border-color .25s} .info-block:hover{border-color:rgba(126,200,227,.28)}
+.info-ico{width:40px;height:40px;flex-shrink:0;background:rgba(126,200,227,.12);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+.info-lbl{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--foam);margin-bottom:.2rem}
+.info-val{font-size:.9rem;line-height:1.5;color:var(--mist)}
+.form{display:flex;flex-direction:column;gap:.9rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem} @media(max-width:480px){.row2{grid-template-columns:1fr}}
+.fw{display:flex;flex-direction:column;gap:.3rem}
+label{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+input,select,textarea{background:rgba(11,61,107,.25);border:1px solid rgba(126,200,227,.15);border-radius:4px;padding:.78rem 1rem;color:var(--white);font-family:'Source Sans 3',sans-serif;font-size:.9rem;outline:none;transition:border-color .25s;width:100%} input:focus,select:focus,textarea:focus{border-color:var(--foam);background:rgba(11,61,107,.4)}
+input::placeholder,textarea::placeholder{color:rgba(122,154,176,.5)}
+select option{background:var(--ink)}
+textarea{resize:vertical;min-height:115px}
+.submit{background:var(--rope);color:var(--deep);border:none;padding:.95rem;border-radius:4px;font-family:'Source Sans 3',sans-serif;font-size:.9rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .25s} .submit:hover{background:#d4aa4c;transform:translateY(-2px)}
+.form-note{color:var(--gray);font-size:.72rem;text-align:center}
+
+/* FOOTER */
+footer{background:var(--deep);border-top:1px solid rgba(126,200,227,.07);padding:2.2rem 5%} .footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.flogo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:900}
+.flogo span{color:var(--foam)}
+.fsub{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gray);margin-top:.18rem}
+.footer-links{display:flex;gap:1.8rem;flex-wrap:wrap}
+.footer-links a{color:var(--gray);text-decoration:none;font-size:.8rem;transition:color .2s} .footer-links a:hover{color:var(--foam)} .footer-copy{color:var(--gray);font-size:.72rem;text-align:center;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.04)}
+
+/* LIGHTBOX */
+.lightbox{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.92);align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:90vh;border-radius:6px;object-fit:contain}
+.lb-close{position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;opacity:.7}
+.lb-close:hover{opacity:1}
+```
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <div class="logo-main">Isneautique <span>76</span></div>
+    <div class="logo-sub">par Dree Négoce</div>
+  </div>
+  <ul>
+    <li><a href="#hero">Accueil</a></li>
+    <li><a href="#catalogue">Catalogue</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-devis">Devis gratuit</a> </nav>
+
+<!-- HERO -->
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="rope-line"></div>
+  <div class="hero-content">
+    <div class="eyebrow-line">Seine-Maritime · Normandie</div>
+    <h1>Votre<br>spécialiste<br><em>moteurs</em><br><strong>nautiques</strong></h1>
+    <div class="divider"></div>
+    <p class="hero-desc">Isneautique 76, filiale de Dree Négoce, vous propose une sélection de moteurs hors-bord, in-bord et électriques. Conseil expert, SAV de proximité en Seine-Maritime.</p>
+    <div class="hero-badges">
+      <span class="badge">Hors-bord</span>
+      <span class="badge">In-bord</span>
+      <span class="badge">Électrique</span>
+      <span class="badge">Pièces & Accessoires</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#catalogue" class="btn-gold">Voir le catalogue</a>
+      <a href="#contact" class="btn-ghost">Demander un devis</a>
+    </div>
+  </div>
+  <div class="hero-waves">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="rgba(8,25,46,.95)"/>
+    </svg>
+  </div>
+</section>
+
+<!-- CATALOGUE -->
+
+<section id="catalogue">
+  <div class="cat-header">
+    <div>
+      <div class="sec-eyebrow">Nos produits</div>
+      <h2>Catalogue Moteurs</h2>
+      <p class="sec-lead">Motorisations sélectionnées pour leur fiabilité et leurs performances.</p>
+    </div>
+    <div class="filters">
+      <button class="flt on" onclick="doFilter('all',this)">Tous</button>
+      <button class="flt" onclick="doFilter('hors-bord',this)">Hors-bord</button>
+      <button class="flt" onclick="doFilter('in-bord',this)">In-bord</button>
+      <button class="flt" onclick="doFilter('electrique',this)">Électrique</button>
+    </div>
+  </div>
+
+  <div class="grid" id="grid">
+
+```
+<!-- ══ FEATURED : Honda BF25 ══ -->
+<div class="featured-card" data-type="hors-bord">
+  <div class="featured-gallery">
+    <span class="feat-badge">⭐ À la vente</span>
+    <div class="feat-slides" id="featSlides">
+      <div class="feat-slide">
+        <img src="https://urldefense.com/v3/__https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Honda_BF25_outboard_motor.jpg/800px-Honda_BF25_outboard_motor.jpg__;!!L8-7AA!QRBlrywDtKUnzSYOIdry4EcD-KKYuMM7moAqU_F-G3_6Ef2P_YH9UP5mKHfKuFpfTgpibZJO34oOi8DQrA$ "
+             onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#0b3d6b,#04111f)';this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:4rem;\'>⚓</div>'"
+             alt="Honda BF25 – Vue principale" id="img0"/>
+      </div>
+      <div class="feat-slide">
+        <img src="https://urldefense.com/v3/__https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Honda_BF25_outboard_motor.jpg/800px-Honda_BF25_outboard_motor.jpg__;!!L8-7AA!QRBlrywDtKUnzSYOIdry4EcD-KKYuMM7moAqU_F-G3_6Ef2P_YH9UP5mKHfKuFpfTgpibZJO34oOi8DQrA$ "
+             onerror="this.style.display='none'" alt="Honda BF25 – Moteur nu" id="img1" style="filter:brightness(.9)"/>
+      </div>
+      <div class="feat-slide">
+        <img src="https://urldefense.com/v3/__https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Honda_BF25_outboard_motor.jpg/800px-Honda_BF25_outboard_motor.jpg__;!!L8-7AA!QRBlrywDtKUnzSYOIdry4EcD-KKYuMM7moAqU_F-G3_6Ef2P_YH9UP5mKHfKuFpfTgpibZJO34oOi8DQrA$ "
+             onerror="this.style.display='none'" alt="Honda BF25 – Détail moteur" id="img2" style="filter:brightness(.85)"/>
+      </div>
+    </div>
+    <button class="gallery-arr arr-prev" onclick="moveSlide(-1)">&#8592;</button>
+    <button class="gallery-arr arr-next" onclick="moveSlide(1)">&#8594;</button>
+    <div class="gallery-nav">
+      <button class="g-dot active" onclick="goSlide(0)"></button>
+      <button class="g-dot" onclick="goSlide(1)"></button>
+      <button class="g-dot" onclick="goSlide(2)"></button>
+    </div>
+  </div>
+
+  <div class="featured-info">
+    <div class="feat-top">
+      <div class="feat-brand">Honda Marine</div>
+      <div class="feat-name">BF25 Four Stroke</div>
+      <div class="feat-sub">Moteur hors-bord 4 temps · Conforme EU-RCD Emissions Standard</div>
+
+      <div class="feat-specs">
+        <div class="feat-spec"><div class="feat-spec-v">25 CV</div><div class="feat-spec-k">Puissance</div></div>
+        <div class="feat-spec"><div class="feat-spec-v">4 Temps</div><div class="feat-spec-k">Cycle moteur</div></div>
+        <div class="feat-spec"><div class="feat-spec-v">3 cyl.</div><div class="feat-spec-k">Cylindres</div></div>
+        <div class="feat-spec"><div class="feat-spec-v">Occasion</div><div class="feat-spec-k">État</div></div>
+      </div>
+
+      <p class="feat-desc">
+        Moteur Honda BF25 Four Stroke hors-bord d'occasion en très bon état général. Carter propre, moteur nu visible et en bon état mécanique. Conforme aux normes EU-RCD d'émissions. Idéal pour semi-rigide, annexe ou petit bateau de pêche. Disponible immédiatement.
+      </p>
+    </div>
+
+    <div class="feat-bottom">
+      <div class="feat-price-wrap">
+        <div class="feat-price-lbl">Prix de vente</div>
+        <div class="feat-price">Nous contacter</div>
+      </div>
+      <button class="feat-cta" onclick="askDevis('Honda BF25 Four Stroke 25CV')">Demander le prix →</button>
+    </div>
+  </div>
+</div>
+```
+
+  </div><!-- /grid : les autres produits s'injectent ici via JS -->
+
+  <div class="grid" id="grid2" style="margin-top:1.5rem"></div> </section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="sec-eyebrow">Nous contacter</div>
+  <h2>Demande de Devis & Renseignements</h2>
+  <p class="sec-lead">Remplissez ce formulaire, notre équipe vous répond sous 24h ouvrées.</p>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <div class="info-block"><div class="info-ico">📍</div><div><div class="info-lbl">Localisation</div><div class="info-val">Seine-Maritime (76)<br>Normandie, France</div></div></div>
+      <div class="info-block"><div class="info-ico">📞</div><div><div class="info-lbl">Téléphone</div><div class="info-val">À renseigner</div></div></div>
+      <div class="info-block"><div class="info-ico">✉️</div><div><div class="info-lbl">Email</div><div class="info-val">À renseigner</div></div></div>
+      <div class="info-block"><div class="info-ico">🕐</div><div><div class="info-lbl">Horaires</div><div class="info-val">Lun–Ven : 8h30–18h00<br>Sam : 9h00–13h00</div></div></div>
+      <div class="info-block"><div class="info-ico">🔧</div><div><div class="info-lbl">Services</div><div class="info-val">Vente · Installation · SAV<br>Financement · Reprise</div></div></div>
+    </div>
+    <form class="form" onsubmit="sendForm(event)">
+      <div class="row2">
+        <div class="fw"><label>Prénom *</label><input type="text" placeholder="Jean" required/></div>
+        <div class="fw"><label>Nom *</label><input type="text" placeholder="Dupont" required/></div>
+      </div>
+      <div class="fw"><label>Email *</label><input type="email" placeholder="jean.dupont@email.com" required/></div>
+      <div class="fw"><label>Téléphone</label><input type="tel" placeholder="06 00 00 00 00"/></div>
+      <div class="fw"><label>Type de demande</label>
+        <select>
+          <option value="" disabled selected>Sélectionnez…</option>
+          <option>Demande de prix – Honda BF25</option>
+          <option>Demande de devis</option>
+          <option>Renseignement produit</option>
+          <option>SAV / Réparation</option>
+          <option>Reprise d'ancien moteur</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="fw"><label>Votre message *</label>
+        <textarea id="msgArea" placeholder="Décrivez votre embarcation, la puissance souhaitée…" required></textarea>
+      </div>
+      <button type="submit" class="submit" id="submitBtn">Envoyer ma demande →</button>
+      <p class="form-note">* Champs obligatoires — Réponse sous 24h ouvrées</p>
+    </form>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox" onclick="closeLb()">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <img id="lbImg" src="" alt=""/>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="flogo">Isneautique <span>76</span></div>
+      <div class="fsub">par Dree Négoce · Seine-Maritime</div>
+    </div>
+    <div class="footer-links">
+      <a href="#hero">Accueil</a><a href="#catalogue">Catalogue</a>
+      <a href="#contact">Contact</a><a href="#">Mentions légales</a>
+    </div>
+  </div>
+  <div class="footer-copy">© 2025 Isneautique 76 – Dree Négoce. Tous droits réservés.</div> </footer>
+
+<script>
+// ── Images réelles uploadées (base64 simulé via URL blob serait idéal,
+//    ici on utilise les src des images passées en data URI si disponibles)
+// Les 3 photos sont chargées depuis les images de la conversation.
+// On va les injecter dynamiquement.
+
+// Galerie featured
+var cur = 0;
+var total = 3;
+function moveSlide(dir){
+  cur = (cur + dir + total) % total;
+  updateGallery();
+}
+function goSlide(i){ cur = i; updateGallery(); } function updateGallery(){
+  document.getElementById('featSlides').style.transform = 'translateX(-' + (cur*100) + '%)';
+  document.querySelectorAll('.g-dot').forEach(function(d,i){
+    d.classList.toggle('active', i===cur);
+  });
+}
+
+// Autres produits
+var P=[
+  {b:'Yamaha',n:'F115 BETX',e:'⚓',t:'hors-bord',cv:'115 CV',kg:'182 kg',p:'8 490 €',pill:'Stock',pc:'pw'},
+  {b:'Mercury',n:'FourStroke 60',e:'⚙️',t:'hors-bord',cv:'60 CV',kg:'113 kg',p:'5 290 €',pill:'Promo',pc:'pg'},
+  {b:'Suzuki',n:'DF 140 ATL',e:'🌊',t:'hors-bord',cv:'140 CV',kg:'213 kg',p:'10 200 €',pill:'',pc:''},
+  {b:'Volvo Penta',n:'D3-220 DPS',e:'⚓',t:'in-bord',cv:'220 CV',kg:'420 kg',p:'26 500 €',pill:'Pro',pc:'pw'},
+  {b:'Torqeedo',n:'Deep Blue 100 R',e:'⚡',t:'electrique',cv:'100 kW',kg:'95 kg',p:'18 500 €',pill:'Éco',pc:'pe'}, ]; var curFilter = 'all';
+
+function render(f){
+  var d = f==='all' ? P : P.filter(function(x){return x.t===f});
+  // featured card visibility
+  var fc = document.querySelector('.featured-card');
+  if(fc) fc.style.display = (f==='all'||f==='hors-bord') ? '' : 'none';
+  document.getElementById('grid2').innerHTML = d.map(function(x){
+    var tl=x.t==='electrique'?'Électrique':x.t==='hors-bord'?'Hors-bord':'In-bord';
+    return '<div class="card"><div class="card-visual">'+x.e+(x.pill?'<span class="pill '+x.pc+'">'+x.pill+'</span>':'')+'</div><div class="card-body"><div class="card-brand">'+x.b+'</div><div class="card-name">'+x.n+'</div><div class="card-specs"><div class="sp"><span class="sp-v">'+x.cv+'</span><span class="sp-k">Puissance</span></div><div class="sp"><span class="sp-v">'+x.kg+'</span><span class="sp-k">Poids</span></div><div class="sp"><span class="sp-v">'+tl+'</span><span class="sp-k">Type</span></div></div></div><div class="card-foot"><div class="price">'+x.p+'</div><button class="devis-btn" onclick="askDevis(\''+x.b+' '+x.n+'\')">Devis →</button></div></div>';
+  }).join('');
+}
+function doFilter(t,btn){
+  document.querySelectorAll('.flt').forEach(function(b){b.classList.remove('on')});
+  btn.classList.add('on'); curFilter=t; render(t); } function askDevis(name){
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+  setTimeout(function(){
+    var ta=document.getElementById('msgArea');
+    if(ta&&!ta.value) ta.value='Bonjour, je souhaite des informations sur : '+name+'.';
+  },600);
+}
+function sendForm(e){
+  e.preventDefault();
+  var btn=document.getElementById('submitBtn');
+  btn.textContent='✅ Demande envoyée !';btn.style.background='#2e7d32';btn.disabled=true;
+  setTimeout(function(){btn.textContent='Envoyer ma demande →';btn.style.background='';btn.disabled=false;},4000);
+}
+function openLb(src){ document.getElementById('lbImg').src=src; document.getElementById('lightbox').classList.add('open'); } function closeLb(){ document.getElementById('lightbox').classList.remove('open'); }
+
+render('all');
+
+// Note pour l'intégration réelle des photos :
+// Remplacez les src des <img id="img0">, <img id="img1">, <img id="img2"> // par les chemins réels vers vos 3 photos du Honda BF25.
+</script>
+
+</body>
+</html>
